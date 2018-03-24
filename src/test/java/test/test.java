@@ -1,6 +1,8 @@
 package test;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -15,6 +17,9 @@ public class test {
 		WebDriver driver= new ChromeDriver();
 		driver.get("http://www.techbeamers.com/testng-parameters-and-dataprovider-annotations/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.quit();
+	
 	}
 
 }
